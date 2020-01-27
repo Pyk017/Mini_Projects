@@ -1,0 +1,179 @@
+@import url('https://fonts.googleapis.com/css?family=Mansalva|Turret+Road|Bitter|Libre+Baskerville&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Lobster|Pacifico|Source+Code+Pro&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Lobster&display=swap');
+body{
+    width: 700px;
+    margin: auto;
+    background-image: url("E:\\Customization\\Deep Blue by Irving GFM\\game.jpg");             
+    background-position: center;
+    background-repeat: repeat;
+    background-size: cover;
+
+}
+h2{
+    font-family: "Libre Baskerville";
+    position: relative;
+    font-weight: 700;
+    font-size: 35px;
+    color: #fff;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+    text-shadow: 0 0 0.25em #1da9cc;
+    user-select: none;
+    white-space: nowrap;
+    filter: blur(0.007em);
+}   
+#message{
+    color: rgb(253, 252, 154);
+    font-size: 25px;
+    font-family: "Bitter";
+    text-shadow: 0 0 3px #fff;
+}
+
+
+.container {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 22px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+
+ .container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+  }
+  .checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    background-color: #eee;
+    border-radius: 50%;
+  }
+  
+  .container:hover input ~ .checkmark {
+    background-color: rgb(145, 135, 135);
+  }
+  
+  .container input:checked ~ .checkmark {
+    background-color: #2196F3;
+  }
+  .checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+  }
+  .container input:checked ~ .checkmark:after {
+    display: block;
+  }
+
+  .container .checkmark:after {
+    top: 9px;
+    left: 9px;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: white;
+  }
+
+.option{
+    font-family: "Source Code Pro";
+    margin-left: 20px;
+    background-color: black;
+    color:cyan;
+    border: 1px solid blue;
+    padding: 5px 20px;
+    font-weight: bold;
+    font-size: 13px;
+    text-align: center;
+    text-shadow: white;
+    text-decoration: none;
+    display: inline-block;
+    box-shadow:
+        0 0 10px rgb(113, 247, 247);
+}
+
+
+
+
+
+#board{
+    padding-left: 170px;        
+
+}
+table{
+    background-color: black;
+    border-collapse: collapse;
+}
+td{
+    border : 2px solid white;
+    height: 80px;
+    width: 100px;
+    text-align: center;
+    color: white;
+    font-size: 40px;
+    font-family: 'Lobster';
+    text-shadow: 0 0 20px cyan;
+    
+}
+
+table tr:first-child td{
+    border-top: 0;
+}
+table tr:last-child td{
+    border-bottom: 0;
+}
+table tr td:first-child{
+    border-left: 0;
+}
+table tr td:last-child{
+    border-right: 0;
+}
+
+.btn{
+    font-family: "Source Code Pro";
+    margin-left: 45px;
+    background-color: black;
+    color:cyan;
+    border: 1px solid blue;
+    padding: 15px 50px;
+    font-weight: bold;
+    font-size: 20px;
+    text-align: center;
+    text-shadow: white;
+    text-decoration: none;
+    display: inline-block;
+    box-shadow:
+        0 0 10px rgb(113, 247, 247);
+}
+
+.btn:hover{
+    box-shadow: 0 0 4px rgb(113, 247, 247);
+    font-size: 17px;
+    padding: 14px 49px;
+    margin-left: 50px;
+
+}
+#end{
+    display: none;
+    width: 200px;
+    top: 300px;
+    background-color: rgba(205, 133, 63, 0.8);
+    position: absolute;
+    left: 50%;
+    margin-left: -120px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    text-align: center;
+    border-radius: 5px;
+    color: white;
+    font-size: 2em;
+}

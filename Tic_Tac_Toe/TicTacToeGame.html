@@ -1,0 +1,44 @@
+<html>
+    <head>
+        <title>TicTacToe.</title>
+        <link rel="stylesheet" type="text/css" href="game.css">
+        <script src ="game.js"></script>
+    </head>
+    <body >
+        <h2><u>Welcome to The Tic Tac Toe Game.</u></h2>
+        <div id="message"><h5>Please Enter Your Sign :- X | O </h5>
+            <label class="container"> X
+                <input type="radio" name="radio" class="sign" value="X">
+                <span class="checkmark"></span>
+              </label>
+              <label class="container"> O
+                <input type="radio" name="radio" class="sign" value="O">
+                <span class="checkmark"></span>
+              </label>
+              <button onclick="signing()"  class="option">Play</button>              
+        </div>
+        <div id = "board">
+            <table id="tab" style="cursor: pointer;">
+                <tr>
+                    <td class="cell" id="0"></td>
+                    <td class="cell" id="1"></td>
+                    <td class="cell" id="2"></td>
+                </tr>
+               <tr>
+                    <td class="cell" id="3"></td>
+                    <td class="cell" id="4"></td>
+                    <td class="cell" id="5"></td>
+                </tr>
+                <tr>
+                    <td class="cell" id="6"></td>
+                    <td class="cell" id="7"></td>
+                    <td class="cell" id="8"></td>
+                </tr>
+            </table><br>
+            <div id="end" style="display: none;">
+                <div id="text"></div>
+            </div>
+            <button onclick="startGame()"  class="btn">Play Again!</button>
+        </div><br><br>
+    </body>
+</htm<button onclick="signing()"  class="btn">Play</button>
