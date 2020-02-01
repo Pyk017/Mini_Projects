@@ -1,0 +1,38 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.button{
+    width: 50;
+    height: 50;
+    font-size: 25;
+    margin: 2;
+    cursor: pointer;
+    background: #607d8b;
+    border: None;
+    color: white; 
+
+}
+.textview{
+    width: 220;
+    margin: 5;
+    font-size: 25;
+    padding: 5;
+    color: #607d8b;
+}
+.main{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+}
+.bg{
+    background: linear-gradient(to right, #e91e63, #3151b5);
+    height: 100%;
+}
+#heading{
+    color: white;
+    font-size: 30px;
+    margin: 18;
+    
+}
