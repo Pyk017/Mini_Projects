@@ -4,7 +4,7 @@ import string
 
 def correct_vals(p, puzzle):
     op1, op, op2, e, r = break_puzzle(puzzle.translate(p))
-
+    # print(op1, op, op2, e, r)
     return eval(op1 + op + op2 + "==" + r)
 
 def break_puzzle(puzzle):
@@ -34,46 +34,48 @@ def get_valid_permutations(puzzle):
 def solve(puzzle):
     letters = get_unique_letters(puzzle)
     if len(letters) > 10:
-        print "INVALID EQUATION : more than one letter maps to same digit"
+        print("INVALID EQUATION : more than one letter maps to same digit")
         return
     for poss in get_valid_permutations(puzzle):
-        p = string.maketrans(''.join(letters), ''.join(poss))
+        p = str.maketrans(''.join(letters), ''.join(poss))
         if correct_vals(p,puzzle):
             answer = dict(zip(letters, poss))
-            print answer
+            print(answer)
             solved_puzzle = puzzle
             for c in answer:
                 x = solved_puzzle.replace(c, answer[c])
                 solved_puzzle = x
-            print solved_puzzle
+            print(solved_puzzle)
 
 
-solve("ABC + DEF = GHIJK")
-# solve(s)
-solve("ODD + ODD = EVEN")
-solve("BIKE + ROAD = SPEED")
-solve("BASE + BALL = GAMES")
+# solve("ABC + DEF = GHIJK")
+# # solve(s)
+# solve("ODD + ODD = EVEN")
+# solve("BIKE + ROAD = SPEED")
+# solve("BASE + BALL = GAMES")
 # solve("NN - NR = TR") won't work for this because of constraint that T cannot be 0, but in case of subtraction it
             # can be true
-solve("FOUR - TWO = TWO")
-solve("SQUARE + DANCE = DANCER")
-solve("NUMBER + NUMBER = PUZZLE")
-solve("TILES + PUZZLES = PICTURE")
-solve("COCA + COLA = OASIS")
-solve("HERE + SHE = COMES")
-solve("CROSS + ROADS = DANGER")
-solve("HURRAY + HUZZA = PUZZLES")
-solve("FATHER + MOTHER = PARENT")
-solve("SQUARE - DANCE = DANCER")
-solve("PIERRE + ELIIOT = TRUDEAU")
-solve("APPLE + LEMON = BANANA")
-solve("PEANUT + TEETH = CARTER")
-solve("TERRIBLE + NUMBER = THIRTEEN")
-solve("BOBBY + LOVED = JEWELS")
-solve("APPLE + PEAR = GRAPE")
-solve("COUNT - COIN = SNUB")
-solve("STOP + PAST = POST")
-solve("FOUR - TWO = TWO")
-solve("PLAYS + WELL = BETTER")
-solve("GREEN + ORANGE = COLORS")
-solve("COMPLEX + LAPLACE = LAPLACE")
+# solve("FOUR - TWO = TWO")
+# solve("SQUARE + DANCE = DANCER")
+# solve("NUMBER + NUMBER = PUZZLE")
+# solve("TILES + PUZZLES = PICTURE")
+# solve("COCA + COLA = OASIS")
+# solve("HERE + SHE = COMES")
+# solve("CROSS + ROADS = DANGER")
+# solve("HURRAY + HUZZA = PUZZLES")
+# solve("FATHER + MOTHER = PARENT")
+# solve("SQUARE - DANCE = DANCER")
+# solve("PIERRE + ELIIOT = TRUDEAU")
+# solve("APPLE + LEMON = BANANA")
+# solve("PEANUT + TEETH = CARTER")
+# solve("TERRIBLE + NUMBER = THIRTEEN")
+# solve("BOBBY + LOVED = JEWELS")
+# solve("APPLE + PEAR = GRAPE")
+# solve("COUNT - COIN = SNUB")
+# solve("STOP + PAST = POST")
+# solve("FOUR - TWO = TWO")
+# solve("PLAYS + WELL = BETTER")
+# solve("GREEN + ORANGE = COLORS")
+# solve("COMPLEX + LAPLACE = LAPLACE")
+#solve('SEND + MORE = MONEY')
+solve(input())

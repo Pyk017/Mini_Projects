@@ -11,16 +11,15 @@ const inputs = [
 ];
 
 var tokenize = function(input) {
-  // Extract the left-side from the right-side of the equation.
+  
   const parts = input.split(/[\+\= ]/).filter(part => part !== '');
 
-  // Get unique tokens and initialize lowest possible values to start with.
+  
   let tokens = {};
   parts.forEach(part => {
     for (let i=0; i<part.length; i++) {
       const token = part[i];
 
-      // If this is the first token in the word, it must be at least 1 (no leading zeroes). If a token was already assigned a 1, use 1 even if the current word has the token in the middle of the word (0).
       tokens[token] = { value: i === 0 ? 1 : (tokens[token] ? tokens[token].value : 0), first: tokens[token] && tokens[token].first || i === 0 };
     }
   });
@@ -29,7 +28,7 @@ var tokenize = function(input) {
 }
 
 var encode = function(parts, tokens) {
-  // Replace the characters in each part by their cooresponding values in tokens.
+  
   let equation = [];
 
   for (let i=0; i<parts.length; i++) {
@@ -50,7 +49,7 @@ var encode = function(parts, tokens) {
 }
 
 var complete = function(equation) {
-  // Check if the left-side equals the right-side of the equation.
+  
   let sum = 0;
 
   for (let i=0; i<equation.length - 1; i++) {
