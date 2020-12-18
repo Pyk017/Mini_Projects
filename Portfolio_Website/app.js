@@ -1,16 +1,17 @@
 
 particlesJS("particles-js",
+  
   {
     "particles": {
       "number": {
-        "value": 250,
+        "value": 80,
         "density": {
           "enable": true,
-          "value_area": 800
+          "value_area": 500
         }
       },
       "color": {
-        "value": "#ffffff"
+        "value": ["#091921", "#e91e63", "#ffc107", "#da00ff"]
       },
       "shape": {
         "type": "circle",
@@ -22,33 +23,33 @@ particlesJS("particles-js",
           "nb_sides": 5
         },
         "image": {
-          "src": "img/github.svg",
+          "src": "mars.jpg",
           "width": 100,
           "height": 100
         }
       },
       "opacity": {
-        "value": 1,
-        "random": true,
+        "value": 0.5,
+        "random": false,
         "anim": {
-          "enable": true,
+          "enable": false,
           "speed": 1,
-          "opacity_min": 0,
+          "opacity_min": 0.1,
           "sync": false
         }
       },
       "size": {
-        "value": 3,
+        "value": 5,
         "random": true,
         "anim": {
           "enable": false,
-          "speed": 4,
-          "size_min": 0.3,
+          "speed": 40,
+          "size_min": 0.1,
           "sync": false
         }
       },
       "line_linked": {
-        "enable": false,
+        "enable": true,
         "distance": 150,
         "color": "#ffffff",
         "opacity": 0.4,
@@ -56,16 +57,15 @@ particlesJS("particles-js",
       },
       "move": {
         "enable": true,
-        "speed": 1,
+        "speed": 6,
         "direction": "none",
-        "random": true,
+        "random": false,
         "straight": false,
         "out_mode": "out",
-        "bounce": false,
         "attract": {
           "enable": false,
           "rotateX": 600,
-          "rotateY": 600
+          "rotateY": 1200
         }
       }
     },
@@ -74,11 +74,11 @@ particlesJS("particles-js",
       "events": {
         "onhover": {
           "enable": true,
-          "mode": "bubble"
+          "mode": "repulse"
         },
         "onclick": {
           "enable": true,
-          "mode": "repulse"
+          "mode": "push"
         },
         "resize": true
       },
@@ -90,15 +90,14 @@ particlesJS("particles-js",
           }
         },
         "bubble": {
-          "distance": 250,
-          "size": 0,
+          "distance": 400,
+          "size": 40,
           "duration": 2,
-          "opacity": 0,
+          "opacity": 8,
           "speed": 3
         },
         "repulse": {
-          "distance": 400,
-          "duration": 0.4
+          "distance": 200
         },
         "push": {
           "particles_nb": 4
@@ -108,6 +107,15 @@ particlesJS("particles-js",
         }
       }
     },
-    "retina_detect": true
+    "retina_detect": true,
+    "config_demo": {
+      "hide_card": false,
+      "background_color": "#b61924",
+      "background_image": "",
+      "background_position": "50% 50%",
+      "background_repeat": "no-repeat",
+      "background_size": "cover"
+    }
   }
+
 );
