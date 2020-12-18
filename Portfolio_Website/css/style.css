@@ -103,10 +103,15 @@ header ul li{
 
 header ul li a{
     position: relative;
+    padding: 10px 10px;
     display: inline-block;
     margin: 0 15px;
     color: #ffffff;
     text-decoration: none;
+}
+header ul li a.active, 
+header ul li a:hover{
+    background: #2196f3;
 }
 
 header.sticky ul li a{
