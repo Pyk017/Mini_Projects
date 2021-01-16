@@ -19,10 +19,10 @@ green = (0, 200, 0)
 bright_red = (200, 0, 0)
 bright_green = (0, 128, 0)
 
-car_img = pygame.image.load("E:\\Workspace\\Mini_Projects\\Car_Game\\Car.png")
+car_img = pygame.image.load("Car.png")
 car_width = 79
 
-game_icon = pygame.image.load("E:\\Workspace\\Mini_Projects\\Car_Game\\Car.png")
+game_icon = pygame.image.load("Car.png")
 pygame.display.set_icon(game_icon)
 
 pause = False
