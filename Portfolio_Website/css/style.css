@@ -13,6 +13,10 @@
     background-image: url("../bg.jpg");
     background-repeat: no-repeat;
     background-size: cover;
+    background-attachment: fixed;
+  background-position: center;
+  /* background-repeat: no-repeat; */
+  /* background-size: cover; */
     
 }
 .banner{
@@ -232,7 +236,16 @@ img{
 }
 
 .services{
-    background: #111111;
+    background: #f7f7f7;
+    padding: 80px;
+    background-image: url("../bg.jpg");
+    min-height: 100%;
+      position: relative;
+  /* opacity: 0.65; */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
     padding-top: 60px;
 }
 
@@ -383,7 +396,7 @@ img{
 .testimonial{
     background: #f7f7f7;
     padding: 80px;
-    background-image: url(../images/product1.jpg);
+    background-image: url("../bg.jpg");
     min-height: 100%;
       position: relative;
   /* opacity: 0.65; */
@@ -391,7 +404,10 @@ img{
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+}
 
+.testimonial .heading {
+    color: white
 }
 
 .testimonial .content{
